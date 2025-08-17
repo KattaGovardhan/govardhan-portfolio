@@ -4,7 +4,7 @@ This is a personal portfolio website built to showcase my skills and projects.
 
 ## Live Demo
 
-[Link to live demo](https://your-live-demo-link.com)
+[Link to live demo](https://govardhanportfolio.vercel.app/)
 
 ## Features
 
