@@ -54,6 +54,4 @@ To get a local copy up and running follow these simple example steps.
 
 ## Contact
 
-Govardhan - [@YourTwitter](https://twitter.com/your_twitter) - your.email@example.com
-
-Project Link: [https://github.com/your*username*/Project-Name](https://github.com/your_username_/Project-Name)
+Govardhan - govardhankatta.dev@gmail.com
