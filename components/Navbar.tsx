@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from "motion/react"; 
 import {ArrowUpRight} from "lucide-react";
+import Link from 'next/link';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,26 +35,26 @@ export default function Navbar() {
             : "border-transparent bg-transparent"
         }`}
       >
-        <a href="#top" className="group inline-flex items-center gap-2 text-sm font-medium">
+        <Link href="/" className="group inline-flex items-center gap-2 text-sm font-medium">
           <span className="grid h-7 w-7 place-items-center rounded-full bg-foreground text-background">
             <span className="font-display text-[15px] leading-none">GK</span>
           </span>
           <span className="tracking-tight">
             Govardhan<span className="text-muted-foreground">.Katta</span>
           </span>
-        </a>
+        </Link>
         <nav className="hidden items-center gap-1 md:flex">
           {links.map(([label, href]) => (
-            <a
+            <Link
               key={href}
               href={href}
               className="rounded-full px-3.5 py-1.5 text-[13px] text-muted-foreground transition hover:bg-elev-1 hover:text-foreground"
             >
               {label}
-            </a>
+            </Link>
           ))}
         </nav>
-        <a
+        <Link
           href="#contact"
           className="group inline-flex items-center gap-2 rounded-full bg-foreground px-4 py-1.5 text-[13px] font-medium text-background transition hover:bg-foreground/90"
         >
@@ -63,7 +64,7 @@ export default function Navbar() {
           </span>
           Book a call
           <ArrowUpRight className="h-3.5 w-3.5 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-        </a>
+        </Link>
       </div>
     </motion.header>
 )}
