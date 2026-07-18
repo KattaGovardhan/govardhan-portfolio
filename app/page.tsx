@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Contact from "@/components/sections/Contact";
 import Hero from "@/components/sections/Hero";
 import Process from "@/components/sections/Process";
@@ -14,6 +15,7 @@ export default function Home() {
       <TechStack />
       <Process />
       <Contact />
+      <Footer />
     </>
   );
 }
