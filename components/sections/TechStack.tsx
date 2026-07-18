@@ -1,16 +1,9 @@
 "use client"
+import { stack } from '@/constants/constants';
 import Section from '../ui/Section';
 import { Workflow } from 'lucide-react';
 
 
-const stack = {
-  Frontend: ["Next.js", "React 19", "TypeScript", "TailwindCSS", "Framer Motion", "GSAP"],
-  Backend: ["Node.js", "NestJS", "Express", "tRPC", "GraphQL", "Bun"],
-  Data: ["PostgreSQL", "MongoDB", "Redis", "Prisma", "Drizzle", "SQLite"],
-  Cloud: ["AWS", "Vercel", "Cloudflare", "Docker", "GitHub Actions", "Terraform"],
-  AI: ["OpenAI", "Gemini", "Anthropic", "LangChain", "Pinecone", "pgvector"],
-  Auth: ["Clerk", "Better Auth", "Auth.js", "Supabase Auth", "OAuth 2", "WebAuthn"],
-};
 
 export default function TechStack() {
   const groups = Object.entries(stack);

@@ -2,50 +2,11 @@
 import { ArrowUpRight, Cpu, Database, Gauge, Layers, Server, ShieldCheck, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Section from '../ui/Section';
+import { services } from '@/constants/constants';
 
 
 export default function Services() {
-    const services = [
-  {
-    icon: Layers,
-    title: "Full-Stack Product Engineering",
-    body: "From blank Figma to production. React, Next.js, Node — shipped as one coherent product.",
-    className: "md:col-span-2 md:row-span-2",
-    feature: true,
-  },
-  {
-    icon: Server,
-    title: "Backend & API Design",
-    body: "Clean Node/NestJS services, typed end-to-end.",
-  },
-  {
-    icon: Sparkles,
-    title: "AI Integrations",
-    body: "OpenAI, Gemini, RAG pipelines and agents that ship.",
-  },
-  {
-    icon: Gauge,
-    title: "Performance Audits",
-    body: "Core Web Vitals, DB hot paths, real user monitoring.",
-  },
-  {
-    icon: Database,
-    title: "Database Design",
-    body: "Postgres schemas that scale from day one.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Auth Systems",
-    body: "Clerk, Better Auth, custom SSO — done right.",
-    className: "md:col-span-2",
-  },
-  {
-    icon: Cpu,
-    title: "Dashboards & Ops",
-    body: "Internal tools your team will actually use.",
-    className: "md:col-span-2",
-  },
-];
+    
   return (
         <Section
       id="services"

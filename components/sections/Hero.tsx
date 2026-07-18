@@ -5,26 +5,12 @@ import React from "react";
 import { useRef } from "react";
 import { GithubIcon, LinkedinIcon, TwitterIcon } from "../icons/SVGIcons";
 import BlurText from "../ui/BlurText";
+import { headingLines, stats } from "@/constants/constants";
+import MagneticButton from "../ui/MagneticButton";
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
-  const headingLines = [
-    {
-      text: "Software engineering",
-      size: "text-[54px] md:text-[88px] lg:text-[104px]",
-    },
-    {
-      text: "for founders who care about craft.",
-      size: "text-[38px] md:text-[72px] lg:text-[72px]",
-    },
-  ];
-
-  const stats = [
-    { value: "6+", label: "years shipping production code" },
-    { value: "20+", label: "products launched for founders" },
-    { value: "48h", label: "avg. first response time" },
-  ];
-
+  
   return (
     <section
       id="top"
@@ -149,43 +135,3 @@ export default function Hero() {
   );
 }
 
-
-
-
-function MagneticButton({
-  href,
-  children,
-  variant = "primary",
-}: {
-  href: string;
-  children: React.ReactNode;
-  variant?: "primary" | "ghost";
-}) {
-  const ref = useRef<HTMLAnchorElement>(null);
-  const onMove = (e: React.MouseEvent) => {
-    const el = ref.current;
-    if (!el) return;
-    const rect = el.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-    el.style.transform = `translate(${x * 0.15}px, ${y * 0.25}px)`;
-  };
-  const onLeave = () => {
-    if (ref.current) ref.current.style.transform = "translate(0,0)";
-  };
-  return (
-    <a
-      ref={ref}
-      href={href}
-      onMouseMove={onMove}
-      onMouseLeave={onLeave}
-      className={`group inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium transition-transform duration-300 ease-out ${
-        variant === "primary"
-          ? "bg-foreground text-background hover:bg-foreground/90"
-          : "border border-hairline text-foreground hover:bg-elev-1"
-      }`}
-    >
-      {children}
-    </a>
-  );
-}

@@ -1,15 +1,8 @@
 'use client'
+import { steps } from '@/constants/constants';
 import Section from '../ui/Section';
 import {motion} from 'framer-motion'
 
-const steps = [
-  ["Discovery", "One call. We map the shape of the problem, not just the ticket list."],
-  ["Planning", "Scope, architecture and a weekly cadence. No surprises, no ceremony."],
-  ["Design", "Interfaces sketched with real content. Prototyped in code where it matters."],
-  ["Development", "Small PRs, previewable branches, honest changelogs. You watch it come together."],
-  ["Testing", "Types, e2e, load — the boring parts that make Sunday nights quiet."],
-  ["Deployment", "Zero‑downtime ships and a runbook you actually understand."],
-];
 
 export default function Process() {
   return (

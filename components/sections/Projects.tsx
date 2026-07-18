@@ -2,40 +2,10 @@
 import { MoveRight } from "lucide-react";
 import ProjectsRow from "../ui/ProjectsRow";
 import Section from "../ui/Section";
+import { projects } from "@/constants/constants";
 
 export default function Projects() {
-    const projects = [
-  {
-    num: "01",
-    name: "Halcyon",
-    kind: "SaaS · Analytics",
-    year: "2025",
-    blurb:
-      "Realtime analytics for indie SaaS. Rebuilt the ingestion pipeline and shipped a redesigned dashboard that cut TTFB by 68%.",
-    metrics: [["+312%", "Signups"], ["68%", "Faster"], ["4wk", "To ship"]],
-    accent: "from-[oklch(0.65_0.19_255)] to-[oklch(0.55_0.18_210)]",
-  },
-  {
-    num: "02",
-    name: "Ember Studio",
-    kind: "AI · Creative Tools",
-    year: "2024",
-    blurb:
-      "A generative editing tool for design studios. LLM orchestration, streaming UI, and a canvas that never drops a frame.",
-    metrics: [["120ms", "Median resp"], ["4×", "Throughput"], ["12", "Model routes"]],
-    accent: "from-[oklch(0.72_0.16_35)] to-[oklch(0.62_0.14_15)]",
-  },
-  {
-    num: "03",
-    name: "Northlane",
-    kind: "Fintech · Dashboard",
-    year: "2024",
-    blurb:
-      "Ops dashboard for a Series A fintech. Consolidated 6 internal tools into a single, keyboard‑first surface.",
-    metrics: [["6→1", "Tools"], ["9k+", "MAU"], ["A+", "Lighthouse"]],
-    accent: "from-[oklch(0.7_0.15_150)] to-[oklch(0.55_0.12_180)]",
-  },
-];
+    
   return (
     <Section
       id="work"

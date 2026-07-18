@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion } from "motion/react"; 
 import {ArrowUpRight} from "lucide-react";
 import Link from 'next/link';
+import { links } from '@/constants/constants';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -13,13 +14,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const links = [
-    ["Work", "#work"],
-    ["Services", "#services"],
-    ["Stack", "#stack"],
-    ["Process", "#process"],
-    ["Words", "#words"],
-  ];
 
   return (
     <motion.header
